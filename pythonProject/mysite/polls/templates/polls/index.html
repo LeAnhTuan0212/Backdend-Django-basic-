@@ -1,0 +1,14 @@
+{% extends 'polls/base.html' %}
+{% block content%}
+    <h1>This is tempplate</h1>
+    <p>Hello. My name is <b>{{name}}</b></p>
+
+    <h2>My items:</h2>
+    <ul>
+        {% for item in items %}
+            {% if item != 'Motobike' %}
+                <li>{{item}}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endblock %}

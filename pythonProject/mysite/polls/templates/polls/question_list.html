@@ -1,0 +1,13 @@
+{% extends 'polls/base.html' %}
+
+{% block content %}
+    {% if  question_list %}
+        <ul>
+            {% for question in question_list %}
+                <a href="{% url 'polls:detail' question.id %}"><li>{{question.question_text}}</li></a>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h3 style="color: red;">Don't find question in question list.</h3>
+    {% endif %}
+{% endblock %}
